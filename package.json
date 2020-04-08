@@ -28,5 +28,12 @@
     "@babel/preset-react": "^7.0.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.3"
-  }
+  },
+  "keywords": [
+    "dark-mode",
+    "darkMode",
+    "react",
+    "dark mode react",
+    "dark mode component"
+  ]
 }
