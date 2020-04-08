@@ -1,7 +1,7 @@
 {
-  "name": "dummy-react-npm-module",
-  "version": "1.0.0",
-  "description": "A dummy react npm module",
+  "name": "monochroma",
+  "version": "0.1.0",
+  "description": "Dark-Mode For React App made Simple.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/recraftstudio/dummy-react-npm-module.git"
+    "url": "git+https://github.com/kaustubh03/monochroma.git"
   },
-  "author": "Manoj Singh Negi",
-  "license": "ISC",
+  "author": "Kaustubh Saxena",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/recraftstudio/dummy-react-npm-module/issues"
+    "url": "https://github.com/kaustubh03/monochroma/issues"
   },
-  "homepage": "https://github.com/recraftstudio/dummy-react-npm-module#readme",
+  "homepage": "https://github.com/kaustubh03/monochroma#readme",
   "peerDependencies": {
     "react": "^16.6.1",
     "react-dom": "^16.6.3"
