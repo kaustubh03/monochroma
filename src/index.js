@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "./styles.css";
+import s from "./styles.css";
 
 
 
@@ -9,7 +9,7 @@ const defaultProps = {}
 class Monochroma extends React.Component {
     componentDidMount() {
         if (localStorage.getItem("_monochroma_mode") === "dark") {
-            document.body.classList.add("dark");
+            document.body.classList.add(s.dark);
         }
     };
     toggleMode() {
@@ -17,34 +17,34 @@ class Monochroma extends React.Component {
             !localStorage.getItem("_monochroma_mode") ||
             localStorage.getItem("_monochroma_mode") === "default"
         ) {
-            document.body.classList.add("dark");
+            document.body.classList.add(s.dark);
             localStorage.setItem("_monochroma_mode", "dark");
         } else {
-            document.body.classList.remove("dark");
+            document.body.classList.remove(s.dark);
             localStorage.setItem("_monochroma_mode", "default");
         }
     };
 
     getChecked() {
-        if (localStorage.getItem('_monochroma_mode') === 'default' && !localStorage.getItem("_monochroma_mode")) {
+        if (localStorage.getItem('_monochroma_mode') === 'default' || !localStorage.getItem("_monochroma_mode")) {
             return false;
         }
-        if (localStorage.getItem('_monochroma_mode') === 'dark') {
+        if (localStorage.getItem('_monochroma_mode') === "dark") {
             return true;
         }
     }
 
     render() {
         return (
-            <div className={'monochroma_parent'}>
-                <span className={'switchParent'}>
-                    <label class="switch">
+            <div className={s.monochroma_parent}>
+                <span className={s.switchParent}>
+                    <label className={s.switch}>
                         <input
                             type="checkbox"
                             onClick={this.toggleMode}
                             defaultChecked={this.getChecked()}
                         />
-                        <span class="slider round"></span>
+                        <span className={`${s.slider} ${s.round}`}></span>
                     </label>
                 </span>
                 {this.props.children}
