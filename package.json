@@ -37,6 +37,7 @@
     "dark mode component"
   ],
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-import-css": "^1.0.0-alpha.11"
   }
 }

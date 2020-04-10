@@ -3,7 +3,8 @@ body.dark{
   color:#fff;
 }
 
-body.dark div{
+body.dark *
+  {
     background: #282c35;
     color:#fff;
   }
@@ -13,6 +14,48 @@ body.dark div span{
 }
 
 body.dark span{
+    color: #fff;  
+}
+/*
+  Inky Style
+*/
+body.inky{
+  background-color:#05093a;
+  color:#fff;
+}
+
+body.inky *
+  {
+    background: #05093a;
+    color:#fff;
+  }
+
+body.inky div span{
+    color: #fff;  
+}
+
+body.inky span{
+    color: #fff;  
+}
+/*
+  Starless Style
+*/
+body.starless{
+  background-color:#000;
+  color:#fff;
+}
+
+body.starless *
+  {
+    background: #000;
+    color:#fff;
+  }
+
+body.starless div span{
+    color: #fff;  
+}
+
+body.starless span{
     color: #fff;  
 }
 
@@ -77,6 +120,6 @@ body.dark span{
 }
 
 .switchParent{
-    float:right;
-    margin-top: 15px;
+    position: absolute;
+    z-index: 9999999;
 }

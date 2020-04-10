@@ -11,7 +11,8 @@
                 {
                     "generateScopedName": "lib-[name]-[local]-[hash:base64:4]"
                 }
-            ]
+            ],
+            "transform-class-properties"
         ]
     
 }
