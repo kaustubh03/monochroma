@@ -1,6 +1,6 @@
 {
   "name": "monochroma",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Dark-Mode For React App made Simple.",
   "main": "index.js",
   "scripts": {
