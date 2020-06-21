@@ -11,10 +11,17 @@ const defaultProps = {
 }
 
 class Monochroma extends React.Component {
+    isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     componentDidMount() {
         const { type } = this.props;
-
-        if (localStorage.getItem("_monochroma_mode") === "dark") {
+        if (!localStorage.getItem("_monochroma_mode")) {
+            if (this.isDark) {
+                localStorage.setItem("_monochroma_mode", "dark");
+            } else {
+                localStorage.setItem("_monochroma_mode", "light");
+            }
+        }
+        if (localStorage.getItem("_monochroma_mode") === 'dark') {
             switch (type) {
                 case "inky":
                     document.body.classList.add(s.inky);
@@ -26,14 +33,12 @@ class Monochroma extends React.Component {
                     document.body.classList.add(s.dark);
                     break;
             }
-
         }
     };
     toggleMode = () => {
         const { type } = this.props;
         if (
-            !localStorage.getItem("_monochroma_mode") ||
-            localStorage.getItem("_monochroma_mode") === "default"
+            localStorage.getItem("_monochroma_mode") === "light"
         ) {
             switch (type) {
                 case "inky":
@@ -59,18 +64,15 @@ class Monochroma extends React.Component {
                     document.body.classList.remove(s.dark);
                     break;
             }
-
-            localStorage.setItem("_monochroma_mode", "default");
+            localStorage.setItem("_monochroma_mode", "light");
         }
     };
 
     getChecked() {
-        if (localStorage.getItem('_monochroma_mode') === 'default' || !localStorage.getItem("_monochroma_mode")) {
-            return false;
-        }
-        if (localStorage.getItem('_monochroma_mode') === "dark") {
+        if ((!localStorage.getItem('_monochroma_mode') && this.isDark) || localStorage.getItem('_monochroma_mode') === 'dark') {
             return true;
         }
+        return false;
     }
 
     getSwitchPosition() {

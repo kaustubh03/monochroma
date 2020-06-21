@@ -32,5 +32,5 @@ customPosition:{ right: "50px", left: "30px", top: "405px" }
 /* Since Switch position is absolute with relatively larger zIndex. Provide css position styles with (right, left, bottom, top) */
 Note: Need not to be sent when using position other than custom.
 ```
-
+*Automatic Dark Mode support added - if the OS is in dark mode in browsers.
 *More Features coming soon. Stay Tuned*
